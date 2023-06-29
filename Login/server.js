@@ -1,15 +1,16 @@
 const express = require("express");
 const app = express();
+const { Firestore } = require("@google-cloud/firestore");
+const cors = require("cors");
 
-const admin = require("firebase-admin");
+app.use(
+  cors({
+    origin: `http://localhost:3000`,
+  })
+);
 
-const credentials = require("./Login_microservice_key.json");
+const firestore = new Firestore();
 
-admin.initializeApp({
-  credential: admin.credential.cert(credentials),
-});
-
-const db = admin.firestore();
 app.use(express.json());
 
 app.use(express.urlencoded({ extended: true }));
@@ -23,8 +24,9 @@ app.post(`/Register`, async (req, res) => {
       email: req.body.email,
       location: req.body.location,
     };
-    const response = await db.collection("Reg").doc(email).set(userInfo);
-    res.send(response);
+    const document = firestore.doc(`Reg/${email}`);
+    const response = document.set(userInfo);
+    res.status(201).json(userInfo);
   } catch (e) {
     res.send(e);
   }
