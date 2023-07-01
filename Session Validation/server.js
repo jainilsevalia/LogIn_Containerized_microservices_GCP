@@ -1,12 +1,13 @@
 const express = require("express");
 const app = express();
 const { Firestore } = require("@google-cloud/firestore");
+module.exports = app;
 
 const cors = require("cors");
 
 app.use(
   cors({
-    origin: `http://localhost:3000`,
+    origin: `https://frontend-container-6j5ciz4cca-uc.a.run.app`,
   })
 );
 
@@ -58,7 +59,7 @@ app.get(`/logout`, async (req, res) => {
     const email = req.query.email;
     const stateRef = firestore.collection("state").doc(email);
     const doc = await stateRef.set(status);
-    res.status(200).json({ ...status });
+    res.sendStatus(200);
   } catch (e) {
     console.log(e);
   }

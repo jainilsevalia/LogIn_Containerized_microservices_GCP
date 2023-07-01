@@ -1,12 +1,13 @@
 const express = require("express");
 const app = express();
 const { Firestore } = require("@google-cloud/firestore");
+module.exports = app;
 
 const cors = require("cors");
 
 app.use(
   cors({
-    origin: `http://localhost:3000`,
+    origin: `https://frontend-container-6j5ciz4cca-uc.a.run.app`,
   })
 );
 const firestore = new Firestore();
