@@ -17,6 +17,7 @@ app.use(express.json());
 
 app.use(express.urlencoded({ extended: true }));
 
+//Session endpoint.
 app.get(`/session`, async (req, res) => {
   const stateRef = firestore.collection("state");
 
@@ -24,6 +25,7 @@ app.get(`/session`, async (req, res) => {
   let userArray = [];
   let response = [];
 
+  //Fetching all the users State is ONLINE from state collection.
   allOnlineUsers.forEach(async (doc) => {
     const userObj = {
       email: doc.id,
@@ -33,6 +35,7 @@ app.get(`/session`, async (req, res) => {
     userArray.push(userObj);
   });
 
+  //Fetching data of user stored in array above(ONLINE Users)
   for (i = 0; i < userArray.length; i++) {
     const userInfoDoc = firestore.collection("Reg").doc(userArray[i].email);
     const document = await userInfoDoc.get();
@@ -50,6 +53,7 @@ app.get(`/session`, async (req, res) => {
   res.status(200).json(response);
 });
 
+//Logout Endpoint.
 app.get(`/logout`, async (req, res) => {
   try {
     const status = {
