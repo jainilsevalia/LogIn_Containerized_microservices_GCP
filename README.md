@@ -1,8 +1,8 @@
-# Project Name
+# LoginFlow Engine
 ## Architecture
 
 ![Project Architecture](Static/GCP_login.drawio.png)
-## Project Overview
+## Overview
 
 This project establishes a robust backend infrastructure using Google Cloud Platform (GCP), featuring Firestore collections for user registration and application state management.
 
