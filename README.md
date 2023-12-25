@@ -1,7 +1,7 @@
 # Project Name
 ## Architecture
 
-![Project Architecture](architecture.png)
+![Project Architecture](Static/GCP_login.drawio.png)
 ## Project Overview
 
 This project establishes a robust backend infrastructure using Google Cloud Platform (GCP), featuring Firestore collections for user registration and application state management.
@@ -32,122 +32,70 @@ This project establishes a robust backend infrastructure using Google Cloud Plat
 11. **Testing Infrastructure**: Defined comprehensive test cases for each backend service, ensuring functionality and reliability.
 12. **Frontend User Interface Testing**: Validated the frontend's user registration and login workflows.
 
-<!-- # Project Showcase
-
-1. **Firestore Setup**
-   - "Firestore collections 'Reg' and 'State' created to manage user registration data and application state."
-
-2. **Backend Container-1**
-   - "Application business logic for Container-1, responsible for handling user data."
-   - "Docker image built and tagged for Container-1, ensuring a reproducible deployment."
-   - "Container-1 Docker image successfully pushed to GCP Artifact Registry for streamlined deployment."
-   - "Artifact Registry console on GCP displaying Container-1 artifacts."
-   - "Container-1 running on Cloud Run service, providing scalable backend infrastructure."
-   - "Postman sending requests to Container-1 for seamless user data storage."
-   - "Container-1 successfully running on GCP and interacting with Firestore."
-
-3. **Backend Container-2**
-   - "Handling null email edge case during user registration in Container-2."
-   - "Implementation of robust email form validation in Container-2."
-   - "Handling already registered email scenario in Container-2."
-   - "Test cases ensuring the reliability of Container-2 functionalities."
-
-4. **Backend Container-3 (Session API)**
-   - "Application business logic for Container-3, focusing on session management."
-   - "Logout API endpoint in Container-3 to manage user sessions."
-   - "Building Docker image for Container-3 to encapsulate session-related functionalities."
-   - "Tagging Docker image for Container-3 for organized version control."
-   - "Successful build and push of Container-3 Docker image to GCP Artifact Registry."
-   - "Artifact Registry console showcasing artifacts related to Container-3."
-   - "Creating Cloud Run service for Container-3 to ensure seamless deployment."
-   - "Container-3 running on Cloud Run service, managing user sessions."
-   - "GET request to retrieve all online users from Container-3."
-   - "GET request for user logout handled by Container-3."
-   - "Logout operation updating user status to offline in the state collection."
-   - "Test cases validating the functionality and reliability of Container-3."
-
-5. **Frontend Deployment**
-   - "Building Docker image for the frontend to encapsulate the user interface."
-   - "Tagging Docker image for the frontend to maintain version control."
-   - "Successful push of frontend Docker image to GCP Artifact Registry."
-   - "Artifact Registry showcasing the Docker image for the frontend."
-   - "Creating Cloud Run service for the frontend to ensure a scalable user interface."
-   - "Frontend successfully running on Cloud Run, providing a user-friendly interface."
-   - "Screenshots of the user registration, login pages, and user list in the frontend application." -->
-
 # Project Showcase
 
 1. **Firestore Setup**
    - "Firestore collections 'Reg' and 'State' created to manage user registration data and application state."
-   ![Firestore Setup](images/firestore_setup.png)
+   ![Firestore Setup](Static/Firestore_Console_image.png)
 
 2. **Backend Container-1**
-   - "Application business logic for Container-1, responsible for handling user data."
-   ![Backend Container-1 Logic](images/container1_logic.png)
    - "Docker image built and tagged for Container-1, ensuring a reproducible deployment."
-   ![Container-1 Docker Build](images/container1_docker_build.png)
+   ![Container-1 Docker Build](Static/image_build_1.png)
    - "Container-1 Docker image successfully pushed to GCP Artifact Registry for streamlined deployment."
-   ![Artifact Registry - Container-1](images/container1_artifact_registry.png)
+   ![Artifact Registry - Container-1](Static/Image_pushed.png)
    - "Artifact Registry console on GCP displaying Container-1 artifacts."
-   ![Artifact Registry Console - Container-1](images/container1_artifact_registry_console.png)
+   ![Artifact Registry Console - Container-1](Static/GCR_Console_Image_1.png)
    - "Container-1 running on Cloud Run service, providing scalable backend infrastructure."
-   ![Container-1 on Cloud Run](images/container1_cloud_run.png)
+   ![Container-1 on Cloud Run](Static/Cloud_Run_console_Container_Running.png)
    - "Postman sending requests to Container-1 for seamless user data storage."
-   ![Postman - Container-1](images/container1_postman.png)
-   - "Container-1 successfully running on GCP and interacting with Firestore."
-   ![Container-1 Running on GCP](images/container1_running_on_gcp.png)
+   ![Postman - Container-1](Static/Postman_test_register.png)
+
 
 3. **Backend Container-2**
+   #### To deploy the Login Service Container, initiate deployment using the code available in the repository for the Login service. Ensure all required configurations are set up and follow the deployment instructions outlined in the repository documentation.
    - "Handling null email edge case during user registration in Container-2."
-   ![Null Email Edge Case - Container-2](images/container2_null_email.png)
+   ![Null Email Edge Case - Container-2](Static/Error_1.png)
    - "Implementation of robust email form validation in Container-2."
-   ![Email Form Validation - Container-2](images/container2_email_validation.png)
+   ![Email Form Validation - Container-2](Static/Error_2.png)
    - "Handling already registered email scenario in Container-2."
-   ![Already Registered Email - Container-2](images/container2_already_registered_email.png)
-   - "Test cases ensuring the reliability of Container-2 functionalities."
-   ![Test Cases - Container-2](images/container2_test_cases.png)
+   ![Already Registered Email - Container-2](Static/Error_3.png)
 
-4. **Backend Container-3 (Session API)**
-   - "Application business logic for Container-3, focusing on session management."
-   ![Backend Container-3 Logic](images/container3_logic.png)
-   - "Logout API endpoint in Container-3 to manage user sessions."
-   ![Logout API - Container-3](images/container3_logout_api.png)
+5. **Backend Container-3 (Session API)**
    - "Building Docker image for Container-3 to encapsulate session-related functionalities."
-   ![Container-3 Docker Build](images/container3_docker_build.png)
-   - "Tagging Docker image for Container-3 for organized version control."
-   ![Container-3 Docker Tag](images/container3_docker_tag.png)
+   ![Container-3 Docker Build](Static/1.png)
    - "Successful build and push of Container-3 Docker image to GCP Artifact Registry."
-   ![Artifact Registry - Container-3](images/container3_artifact_registry.png)
+   ![Artifact Registry - Container-3](Static/3.png)
    - "Artifact Registry console showcasing artifacts related to Container-3."
-   ![Artifact Registry Console - Container-3](images/container3_artifact_registry_console.png)
+   ![Artifact Registry Console - Container-3](Static/4.png)
    - "Creating Cloud Run service for Container-3 to ensure seamless deployment."
-   ![Container-3 Cloud Run Service](images/container3_cloud_run.png)
+   ![Container-3 Cloud Run Service](Static/5.png)
    - "Container-3 running on Cloud Run service, managing user sessions."
-   ![Container-3 on Cloud Run](images/container3_running_on_cloud_run.png)
+   ![Container-3 on Cloud Run](Static/6.png)
    - "GET request to retrieve all online users from Container-3."
-   ![GET Request - Container-3](images/container3_get_request.png)
+   ![GET Request - Container-3](Static/7.png)
    - "GET request for user logout handled by Container-3."
-   ![Logout Request - Container-3](images/container3_logout_request.png)
+   ![Logout Request - Container-3](Static/8.png)
    - "Logout operation updating user status to offline in the state collection."
-   ![Logout Update - Container-3](images/container3_logout_update.png)
-   - "Test cases validating the functionality and reliability of Container-3."
-   ![Test Cases - Container-3](images/container3_test_cases.png)
+   ![Logout Update - Container-3](9.png)
 
-5. **Frontend Deployment**
+6. **Frontend Deployment**
    - "Building Docker image for the frontend to encapsulate the user interface."
-   ![Frontend Docker Build](images/frontend_docker_build.png)
+   ![Frontend Docker Build](Static/f1.png)
    - "Tagging Docker image for the frontend to maintain version control."
-   ![Frontend Docker Tag](images/frontend_docker_tag.png)
+   ![Frontend Docker Tag](Static/f2.png)
    - "Successful push of frontend Docker image to GCP Artifact Registry."
-   ![Artifact Registry - Frontend](images/frontend_artifact_registry.png)
+   ![Artifact Registry - Frontend](Static/f3.png)
    - "Artifact Registry showcasing the Docker image for the frontend."
-   ![Artifact Registry Console - Frontend](images/frontend_artifact_registry_console.png)
+   ![Artifact Registry Console - Frontend](Static/f4.png)
    - "Creating Cloud Run service for the frontend to ensure a scalable user interface."
-   ![Frontend Cloud Run Service](images/frontend_cloud_run.png)
+   ![Frontend Cloud Run Service](Static/f5.png)
    - "Frontend successfully running on Cloud Run, providing a user-friendly interface."
-   ![Frontend on Cloud Run](images/frontend_running_on_cloud_run.png)
+   ![Frontend on Cloud Run](Static/f6.png)
    - "Screenshots of the user registration, login pages, and user list in the frontend application."
-   ![Frontend Screenshots](images/frontend_screenshots.png)
+   ![Frontend Screenshots](Static/f7.png)
+   ![Frontend Screenshots](Static/f8.png)
+   ![Frontend Screenshots](Static/f9.png)
+   ![Frontend Screenshots](Static/f10.png)
 
 
 ## Getting Started
